@@ -1,0 +1,12 @@
+version: '2'
+services:
+  fastodo-db:
+    image: fastodo-db
+    build: docker/fastodo-db
+    container_name: fastodo-db
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: fastodo_local
+      TZ: Asia/Tokyo
